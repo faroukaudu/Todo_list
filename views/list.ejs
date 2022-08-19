@@ -1,0 +1,22 @@
+<%- include("header"); -%>
+
+    <div class="box" id="heading">
+        <h1><%= topTitle %></h1>
+    </div>
+
+<!-- Illterating Through Array -->
+    <div class="box">
+        <% for (let i=0; i<newMeal.length; i++){ %>
+          <div class="item">
+          <input type="checkbox">
+          <p><%= newMeal[i] %></p>
+
+
+      </div>
+        <% } %>
+          <form class="" action="/" method="post">
+            <input type="text" name="additem" placeholder="Add New Item" required autocomplete="off">
+            <button type="submit" name="list" value= <%= topTitle %> >+</button>
+          </form>
+    </div>
+    <%- include("footer"); -%>
