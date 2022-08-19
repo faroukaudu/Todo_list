@@ -1,7 +1,7 @@
 # Todo_List
 
-Simple to do list
-## Getting Started
+Simple Todo List using Nodejs, Ejs and Express Boiler plate.
+## TodoList as Boiler Plate
 
 This project is a Boiler-plate for NodeJS, Express and EJS.
 
