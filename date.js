@@ -1,3 +1,4 @@
+//Current Date module
 
 exports.getDate = function (){
   let days = new Date();

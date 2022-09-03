@@ -6,17 +6,22 @@
 
 <!-- Illterating Through Array -->
     <div class="box">
-        <% for (let i=0; i<newMeal.length; i++){ %>
-          <div class="item">
-          <input type="checkbox">
-          <p><%= newMeal[i] %></p>
+        <!-- for (let i=0; i<newMeal.length; i++){  -->
+        <% newMeal.forEach(function(items){ %>
+          <form action="/delete" method="post">
+            <div class="item">
+            <input type="checkbox" name="checkId" value="<%= items._id %>" onChange="this.form.submit()">
+            <input type="hidden" name="listTitle" value="<%= topTitle %>">
+            <p><%= items.item %></p>
+          </form>
 
 
       </div>
-        <% } %>
-          <form class="" action="/" method="post">
-            <input type="text" name="additem" placeholder="Add New Item" required autocomplete="off">
-            <button type="submit" name="list" value= <%= topTitle %> >+</button>
+      <% }) %>
+
+          <form class="item" action="/" method="post">
+            <input type="text" name="additem" placeholder="Add New Item"  autocomplete="off">
+            <button type="submit" name="list" value= "<%= topTitle %>" >+</button>
           </form>
     </div>
     <%- include("footer"); -%>
